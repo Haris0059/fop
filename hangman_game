@@ -17,21 +17,18 @@ def hidden():
 
 def hangman(hidden_word):
     print("This is Hangman game!")
-    length_word = "_ "*len(hidden_word)
+    length_word = "_ " * len(hidden_word)
     print(length_word)
     
-    while True:
-        
+    while True:       
         letter = str(input("Enter one letter: "))   
     
         for i in hidden_word:
             if letter == i:
                 print(letter ,end=" ")
             else:
-                print("_" ,end=" )
+                print("_" ,end=" ")
                 
-    
-  
 hangman(hidden())
 
 
