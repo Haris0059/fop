@@ -11,24 +11,31 @@ def clear_terminal():
 
 
 def hidden():    
-    word = str(input("Enter your hidden word for hangman game: "))
-    clear_terminal()
-    return word
+    hidden_word = str(input("Enter your hidden word for hangman game: "))
+    return hidden_word
 
-def hangman(hidden_word):
+def display(hidden_word):
     print("This is Hangman game!")
     length_word = "_ " * len(hidden_word)
     print(length_word)
+    return hidden_word
+
+def guess(hidden_word):
     
     while True:       
-        letter = str(input("Enter one letter: "))   
+        letter = str(input("Enter one letter: "))
+        test_word = ""
     
         for i in hidden_word:
             if letter == i:
-                print(letter ,end=" ")
+                test_word = test_word + letter + " "
+                # print(letter ,end=" ")
             else:
-                print("_" ,end=" ")
-                
-hangman(hidden())
+                test_word  = test_word + "_" + " "
+                # print("_", end=" ")
+        print(test_word)
+
+guess(display(hidden()))
+
 
 
