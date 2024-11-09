@@ -1,8 +1,7 @@
 # Write a function that for given 3 int values, a b c, returns their sum.
 # However, if one of the values is the same as another of the values, it does not count towards the sum.
 
-def loneSum(a,b,c):
-
+def loneSum(a,b,c):s
 # NOT FINISHED
 
 
