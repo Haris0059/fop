@@ -5,8 +5,13 @@
 # ((333, 33), (1416, 55))
 
 def convert(tup):
-    new_tup = ()
-    
+    new = []
+    for i in tup:
+        inside = []
+        for j in i:
+            inside.append(int(j))
+        new.append(tuple(inside))
+    return tuple(new)
 
 tup = (('333', '33'), ('1416', '55'))
 print(convert(tup))
